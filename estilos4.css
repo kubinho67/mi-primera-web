@@ -1,0 +1,704 @@
+/* =====================================
+   CONFIGURACIÓN GENERAL
+===================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+
+    background:
+        radial-gradient(
+            circle at top,
+            #202d5b 0%,
+            #0a1022 45%,
+            #060a15 100%
+        );
+
+    color: #ffffff;
+
+    min-height: 100vh;
+}
+
+
+/* =====================================
+   NAVBAR
+===================================== */
+
+.header {
+    width: 100%;
+
+    background: #0b1124;
+
+    border-bottom: 1px solid #2d3963;
+
+    position: sticky;
+
+    top: 0;
+
+    z-index: 1000;
+}
+
+.navbar {
+    width: 90%;
+
+    max-width: 1150px;
+
+    min-height: 76px;
+
+    margin: auto;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+}
+
+.logo {
+    color: #8178ff;
+
+    text-decoration: none;
+
+    font-size: 28px;
+
+    font-weight: bold;
+}
+
+.menu {
+    display: flex;
+
+    align-items: center;
+
+    gap: 28px;
+
+    list-style: none;
+}
+
+.menu a {
+    color: #dce0ed;
+
+    text-decoration: none;
+
+    font-size: 15px;
+
+    transition: 0.3s;
+}
+
+.menu a:hover {
+    color: #827aff;
+}
+
+
+/* =====================================
+   CONTENEDOR
+===================================== */
+
+.contenedor {
+    width: 90%;
+
+    max-width: 850px;
+
+    margin: auto;
+
+    padding: 70px 0 100px;
+}
+
+
+/* =====================================
+   ENCABEZADO
+===================================== */
+
+.encabezado {
+    text-align: center;
+
+    margin-bottom: 35px;
+}
+
+.badge {
+    display: inline-block;
+
+    color: #877eff;
+
+    font-size: 12px;
+
+    font-weight: bold;
+
+    letter-spacing: 4px;
+
+    margin-bottom: 10px;
+}
+
+.encabezado h1 {
+    font-size: 46px;
+
+    margin-bottom: 12px;
+}
+
+.encabezado p {
+    color: #aeb7cb;
+
+    font-size: 16px;
+
+    line-height: 1.6;
+}
+
+
+/* =====================================
+   RESUMEN
+===================================== */
+
+.resumen {
+    width: 100%;
+
+    padding: 28px 30px;
+
+    margin-bottom: 22px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 25px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #1b274b,
+            #131c37
+        );
+
+    border: 1px solid #39466d;
+
+    border-radius: 18px;
+
+    box-shadow:
+        0 15px 35px rgba(0, 0, 0, 0.25);
+}
+
+.resumen-info span,
+.total span {
+    display: block;
+
+    color: #877eff;
+
+    font-size: 10px;
+
+    font-weight: bold;
+
+    letter-spacing: 2px;
+}
+
+.resumen-info h2 {
+    font-size: 27px;
+
+    margin: 7px 0;
+}
+
+.resumen-info p {
+    color: #949db2;
+
+    font-size: 14px;
+}
+
+.total {
+    text-align: right;
+}
+
+.total strong {
+    display: block;
+
+    color: #877eff;
+
+    font-size: 32px;
+
+    margin-top: 7px;
+}
+
+
+/* =====================================
+   TARJETAS
+===================================== */
+
+.card {
+    width: 100%;
+
+    padding: 30px;
+
+    margin-bottom: 22px;
+
+    background:
+        linear-gradient(
+            145deg,
+            #171f3b,
+            #11192f
+        );
+
+    border: 1px solid #303d65;
+
+    border-radius: 18px;
+
+    box-shadow:
+        0 12px 30px rgba(0, 0, 0, 0.18);
+}
+
+
+/* =====================================
+   TÍTULO DE PASO
+===================================== */
+
+.titulo-paso {
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    margin-bottom: 25px;
+}
+
+.numero {
+    width: 40px;
+
+    height: 40px;
+
+    flex-shrink: 0;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #2b3564;
+
+    color: #9189ff;
+
+    font-weight: bold;
+}
+
+.titulo-paso h2 {
+    font-size: 22px;
+
+    margin-bottom: 5px;
+}
+
+.titulo-paso p {
+    color: #8f98ae;
+
+    font-size: 14px;
+}
+
+
+/* =====================================
+   MÉTODOS
+===================================== */
+
+.metodos {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 13px;
+}
+
+.metodo {
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    width: 100%;
+
+    min-height: 80px;
+
+    padding: 15px 18px;
+
+    background: #0c1327;
+
+    border: 1px solid #303b61;
+
+    border-radius: 12px;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.metodo:hover {
+    border-color: #8279ff;
+
+    background: #111a34;
+
+    transform: translateX(3px);
+}
+
+.metodo input {
+    width: 18px;
+
+    height: 18px;
+
+    accent-color: #756cf5;
+}
+
+.metodo-icono {
+    width: 48px;
+
+    height: 48px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    flex-shrink: 0;
+
+    background: #273158;
+
+    border-radius: 11px;
+
+    font-size: 24px;
+}
+
+.metodo-texto h3 {
+    font-size: 17px;
+
+    margin-bottom: 4px;
+}
+
+.metodo-texto p {
+    color: #8f98ad;
+
+    font-size: 13px;
+}
+
+
+/* =====================================
+   FORMULARIO
+===================================== */
+
+.formulario {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 18px;
+}
+
+.campo {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 8px;
+}
+
+.campo label {
+    color: #dce0ec;
+
+    font-size: 14px;
+
+    font-weight: bold;
+}
+
+.campo input {
+    width: 100%;
+
+    padding: 14px;
+
+    border: 1px solid #303b61;
+
+    border-radius: 9px;
+
+    background: #0c1327;
+
+    color: white;
+
+    font-size: 14px;
+}
+
+.campo input::placeholder {
+    color: #606a82;
+}
+
+.campo input:focus {
+    outline: none;
+
+    border-color: #7c73ff;
+
+    box-shadow:
+        0 0 0 3px rgba(124, 115, 255, 0.10);
+}
+
+
+/* =====================================
+   CONFIRMACIÓN
+===================================== */
+
+.confirmacion {
+    width: 100%;
+
+    padding: 25px;
+
+    background: #10182f;
+
+    border: 1px solid #303c60;
+
+    border-radius: 17px;
+}
+
+.seguridad {
+    display: flex;
+
+    align-items: center;
+
+    gap: 14px;
+
+    padding: 15px;
+
+    margin-bottom: 18px;
+
+    background: #0c1327;
+
+    border-radius: 11px;
+}
+
+.seguridad-icono {
+    font-size: 25px;
+}
+
+.seguridad strong {
+    display: block;
+
+    font-size: 14px;
+
+    margin-bottom: 3px;
+}
+
+.seguridad p {
+    color: #818aa1;
+
+    font-size: 12px;
+}
+
+
+/* =====================================
+   BOTÓN DE PAGO
+===================================== */
+
+.boton-pago {
+    width: 100%;
+
+    padding: 19px 23px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    border: none;
+
+    border-radius: 12px;
+
+    background:
+        linear-gradient(
+            90deg,
+            #6258e9,
+            #887eff
+        );
+
+    color: #ffffff;
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    font-size: 17px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 10px 28px rgba(101, 91, 235, 0.35);
+
+    transition: 0.3s;
+}
+
+.boton-pago:hover {
+    transform: translateY(-3px);
+
+    background:
+        linear-gradient(
+            90deg,
+            #746af4,
+            #968cff
+        );
+
+    box-shadow:
+        0 15px 35px rgba(101, 91, 235, 0.45);
+}
+
+.boton-pago strong {
+    font-size: 25px;
+}
+
+
+/* =====================================
+   MENSAJE
+===================================== */
+
+#mensaje {
+    display: none;
+
+    width: 100%;
+
+    padding: 18px;
+
+    margin-top: 20px;
+
+    background: #17213f;
+
+    border: 1px solid #3e4b74;
+
+    border-radius: 12px;
+
+    text-align: center;
+
+    color: #958cff;
+
+    line-height: 1.7;
+}
+
+#mensaje.mostrar {
+    display: block;
+}
+
+
+/* =====================================
+   VOLVER
+===================================== */
+
+.volver {
+    text-align: center;
+
+    margin-top: 25px;
+}
+
+.volver a {
+    color: #929bb0;
+
+    text-decoration: none;
+
+    font-size: 14px;
+
+    transition: 0.3s;
+}
+
+.volver a:hover {
+    color: #8279ff;
+}
+
+
+/* =====================================
+   FOOTER
+===================================== */
+
+footer {
+    padding: 40px 20px;
+
+    text-align: center;
+
+    background: #050912;
+
+    border-top: 1px solid #202a46;
+}
+
+.footer-logo {
+    color: #8279ff;
+
+    font-size: 24px;
+
+    font-weight: bold;
+
+    margin-bottom: 9px;
+}
+
+footer p {
+    color: #8d96aa;
+
+    margin: 6px;
+}
+
+footer .copy {
+    font-size: 12px;
+}
+
+
+/* =====================================
+   RESPONSIVE
+===================================== */
+
+@media (max-width: 750px) {
+
+    .navbar {
+        flex-direction: column;
+
+        gap: 15px;
+
+        padding: 20px 0;
+    }
+
+    .menu {
+        flex-wrap: wrap;
+
+        justify-content: center;
+
+        gap: 15px;
+    }
+
+    .resumen {
+        flex-direction: column;
+
+        align-items: flex-start;
+    }
+
+    .total {
+        text-align: left;
+    }
+
+    .formulario {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+@media (max-width: 500px) {
+
+    .contenedor {
+        width: 92%;
+
+        padding-top: 45px;
+    }
+
+    .encabezado h1 {
+        font-size: 34px;
+    }
+
+    .card {
+        padding: 22px;
+    }
+}

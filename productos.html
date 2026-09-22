@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>GameForge - Planes</title>
+
+    <link rel="stylesheet" href="estilos3.css">
+</head>
+
+<body>
+
+    <!-- ==================== NAVBAR ==================== -->
+
+    <header>
+
+        <nav class="navbar">
+
+            <a href="index.html" class="logo">
+                🎮 GameForge
+            </a>
+
+            <ul class="menu">
+
+                <li>
+                    <a href="index.html">
+                        Inicio
+                    </a>
+                </li>
+
+                <li>
+                    <a href="index.html#proceso">
+                        Proceso
+                    </a>
+                </li>
+
+                <li>
+                    <a href="index.html#proyectos">
+                        Proyectos
+                    </a>
+                </li>
+
+                <li>
+                    <a href="productos.html" class="activo">
+                        Planes
+                    </a>
+                </li>
+
+                <li>
+                    <a href="quienes.html">
+                        Contáctanos
+                    </a>
+                </li>
+
+            </ul>
+
+        </nav>
+
+    </header>
+
+
+    <!-- ==================== HERO ==================== -->
+
+    <section class="hero">
+
+        <div class="hero-text">
+
+            <span class="subtitulo">
+                GAMEFORGE
+            </span>
+
+            <h1>
+                Convierte tu idea
+                en un videojuego
+            </h1>
+
+            <p>
+                Elige el plan que mejor se adapte a tu proyecto
+                y comienza a desarrollar tu videojuego.
+            </p>
+
+        </div>
+
+        <div class="hero-image">
+
+            <img
+                src="imagenes/imagen2.png"
+                alt="Desarrollo de videojuegos"
+            >
+
+        </div>
+
+    </section>
+
+
+    <!-- ==================== PLANES ==================== -->
+
+    <section class="planes">
+
+        <div class="titulo-seccion">
+
+            <span>
+                PLANES GAMEFORGE
+            </span>
+
+            <h2>
+                Elige tu plan
+            </h2>
+
+            <p>
+                Selecciona la opción que mejor se adapte
+                a tu proyecto.
+            </p>
+
+        </div>
+
+
+        <div class="plan-container">
+
+
+            <!-- ==================== BÁSICO ==================== -->
+
+            <article class="plan-card">
+
+                <div class="plan-icon">
+                    🎮
+                </div>
+
+                <h3>
+                    Plan Básico
+                </h3>
+
+                <p class="plan-description">
+                    Ideal para comenzar a desarrollar
+                    tu primer videojuego.
+                </p>
+
+                <div class="precio">
+                    <small>S/</small> 29.90
+                </div>
+
+                <div class="separador"></div>
+
+                <ul>
+
+                    <li>✓ Asesoría inicial</li>
+
+                    <li>✓ Concepto del videojuego</li>
+
+                    <li>✓ Diseño básico</li>
+
+                    <li>✓ Guía de programación</li>
+
+                </ul>
+
+                <button
+                    type="button"
+                    class="btn-plan"
+                    onclick="seleccionarPlan('Plan Básico', '29.90')"
+                >
+                    Elegir este plan
+                </button>
+
+            </article>
+
+
+            <!-- ==================== PRO ==================== -->
+
+            <article class="plan-card destacado">
+
+                <div class="recomendado">
+                    MÁS ELEGIDO
+                </div>
+
+                <div class="plan-icon">
+                    🚀
+                </div>
+
+                <h3>
+                    Plan Pro
+                </h3>
+
+                <p class="plan-description">
+                    Para proyectos que necesitan más
+                    herramientas y asesoría.
+                </p>
+
+                <div class="precio">
+                    <small>S/</small> 59.90
+                </div>
+
+                <div class="separador"></div>
+
+                <ul>
+
+                    <li>✓ Todo lo del Básico</li>
+
+                    <li>✓ Diseño de personajes</li>
+
+                    <li>✓ Diseño de escenarios</li>
+
+                    <li>✓ Asesoría de programación</li>
+
+                    <li>✓ Pruebas del videojuego</li>
+
+                </ul>
+
+                <button
+                    type="button"
+                    class="btn-plan"
+                    onclick="seleccionarPlan('Plan Pro', '59.90')"
+                >
+                    Elegir este plan
+                </button>
+
+            </article>
+
+
+            <!-- ==================== PREMIUM ==================== -->
+
+            <article class="plan-card">
+
+                <div class="plan-icon">
+                    👑
+                </div>
+
+                <h3>
+                    Plan Premium
+                </h3>
+
+                <p class="plan-description">
+                    Para proyectos más completos
+                    y necesidades avanzadas.
+                </p>
+
+                <div class="precio">
+                    <small>S/</small> 99.90
+                </div>
+
+                <div class="separador"></div>
+
+                <ul>
+
+                    <li>✓ Todo lo del Pro</li>
+
+                    <li>✓ Desarrollo avanzado</li>
+
+                    <li>✓ Optimización</li>
+
+                    <li>✓ Soporte personalizado</li>
+
+                    <li>✓ Revisión final</li>
+
+                </ul>
+
+                <button
+                    type="button"
+                    class="btn-plan"
+                    onclick="seleccionarPlan('Plan Premium', '99.90')"
+                >
+                    Elegir este plan
+                </button>
+
+            </article>
+
+        </div>
+
+    </section>
+
+
+    <!-- ==================== SELECCIÓN ==================== -->
+
+    <section class="seleccion">
+
+        <div class="seleccion-box">
+
+            <div class="check-icon">
+                ✓
+            </div>
+
+            <span class="mini-titulo">
+                TU SELECCIÓN
+            </span>
+
+            <h2>
+                ¿Listo para comenzar?
+            </h2>
+
+            <div id="resultado">
+
+                <p class="sin-seleccion">
+                    Selecciona uno de los planes de arriba.
+                </p>
+
+            </div>
+
+
+            <!-- IMPORTANTE:
+                 NO tiene disabled -->
+
+            <button
+                id="continuarPago"
+                type="button"
+                class="btn-pago"
+                onclick="irAlPago()"
+            >
+
+                <span>
+                    Continuar al pago
+                </span>
+
+                <strong>
+                    →
+                </strong>
+
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- ==================== FOOTER ==================== -->
+
+    <footer>
+
+        <div class="footer-logo">
+            🎮 GameForge
+        </div>
+
+        <p>
+            Creación y desarrollo de videojuegos
+        </p>
+
+
+
+    </footer>
+
+
+    <!-- ==================== JAVASCRIPT ==================== -->
+
+    <script src="productos.js"></script>
+
+</body>
+
+</html>

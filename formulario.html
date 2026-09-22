@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>GameForge - Soporte</title>
+
+
+    <!-- =========================
+         ESTILOS DE LA PÁGINA
+    ========================== -->
+
+    <style>
+
+        /* =========================
+           GENERAL
+        ========================== */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+
+            background:
+                radial-gradient(
+                    circle at top,
+                    #202d5b,
+                    #080d1c 50%
+                );
+
+            color: white;
+
+            min-height: 100vh;
+        }
+
+
+        /* =========================
+           NAVBAR
+        ========================== */
+
+        header {
+            width: 100%;
+
+            background: #0b1124;
+
+            border-bottom: 1px solid #2d3963;
+        }
+
+        .navbar {
+            width: 90%;
+            max-width: 1150px;
+
+            min-height: 78px;
+
+            margin: auto;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: space-between;
+        }
+
+        .logo {
+            color: #8178ff;
+
+            text-decoration: none;
+
+            font-size: 27px;
+
+            font-weight: bold;
+        }
+
+        .menu {
+            list-style: none;
+
+            display: flex;
+
+            gap: 28px;
+        }
+
+        .menu a {
+            color: #dce0ec;
+
+            text-decoration: none;
+
+            font-size: 15px;
+
+            transition: 0.3s;
+        }
+
+        .menu a:hover {
+            color: #8178ff;
+        }
+
+
+        /* =========================
+           CONTENEDOR
+        ========================== */
+
+        .contenedor {
+            width: 90%;
+
+            max-width: 950px;
+
+            margin: auto;
+
+            padding: 70px 0 90px;
+        }
+
+
+        /* =========================
+           ENCABEZADO
+        ========================== */
+
+        .encabezado {
+            text-align: center;
+
+            margin-bottom: 40px;
+        }
+
+        .encabezado span {
+            color: #8178ff;
+
+            font-size: 12px;
+
+            font-weight: bold;
+
+            letter-spacing: 4px;
+        }
+
+        .encabezado h1 {
+            font-size: 46px;
+
+            margin: 15px 0;
+        }
+
+        .encabezado p {
+            color: #aeb6ca;
+
+            font-size: 17px;
+
+            line-height: 1.6;
+        }
+
+
+        /* =========================
+           CAJA PRINCIPAL
+        ========================== */
+
+        .formulario-contenedor {
+
+            background:
+                linear-gradient(
+                    145deg,
+                    #18213f,
+                    #11182f
+                );
+
+            border: 1px solid #39466d;
+
+            border-radius: 22px;
+
+            padding: 15px;
+
+            box-shadow:
+                0 20px 50px rgba(0, 0, 0, 0.30);
+        }
+
+
+        /* =========================
+           GOOGLE FORM
+        ========================== */
+
+        .formulario-contenedor iframe {
+
+            width: 100%;
+
+            height: 1000px;
+
+            display: block;
+
+            border: none;
+
+            border-radius: 14px;
+
+            background: white;
+        }
+
+
+        /* =========================
+           VOLVER
+        ========================== */
+
+        .volver {
+
+            text-align: center;
+
+            margin-top: 30px;
+        }
+
+        .volver a {
+
+            display: inline-block;
+
+            padding: 13px 22px;
+
+            border-radius: 10px;
+
+            background: #6f66f3;
+
+            color: white;
+
+            text-decoration: none;
+
+            font-weight: bold;
+
+            transition: 0.3s;
+        }
+
+        .volver a:hover {
+
+            background: #8279ff;
+
+            transform: translateY(-3px);
+        }
+
+
+        /* =========================
+           FOOTER
+        ========================== */
+
+        footer {
+
+            padding: 40px 20px;
+
+            text-align: center;
+
+            background: #050912;
+
+            border-top: 1px solid #202945;
+        }
+
+        .footer-logo {
+
+            color: #8178ff;
+
+            font-size: 24px;
+
+            font-weight: bold;
+
+            margin-bottom: 10px;
+        }
+
+        footer p {
+
+            color: #8d96aa;
+
+            margin: 6px;
+        }
+
+        footer .copy {
+
+            font-size: 12px;
+
+            margin-top: 10px;
+        }
+
+
+        /* =========================
+           RESPONSIVE
+        ========================== */
+
+        @media (max-width: 800px) {
+
+            .navbar {
+
+                flex-direction: column;
+
+                gap: 18px;
+
+                padding: 20px 0;
+            }
+
+            .menu {
+
+                flex-wrap: wrap;
+
+                justify-content: center;
+
+                gap: 15px;
+            }
+
+            .encabezado h1 {
+
+                font-size: 36px;
+            }
+
+            .formulario-contenedor {
+
+                padding: 8px;
+            }
+
+            .formulario-contenedor iframe {
+
+                height: 900px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- =========================
+         NAVBAR
+    ========================== -->
+
+    <header>
+
+        <nav class="navbar">
+
+            <a href="index.html" class="logo">
+                🎮 GameForge
+            </a>
+
+
+            <ul class="menu">
+
+                <li>
+                    <a href="index.html">
+                        Inicio
+                    </a>
+                </li>
+
+                <li>
+                    <a href="productos.html">
+                        Planes
+                    </a>
+                </li>
+
+                <li>
+                    <a href="quienes.html">
+                        Contáctanos
+                    </a>
+                </li>
+
+            </ul>
+
+        </nav>
+
+    </header>
+
+
+
+    <!-- =========================
+         CONTENIDO
+    ========================== -->
+
+    <main class="contenedor">
+
+
+        <section class="encabezado">
+
+            <span>
+                SOPORTE GAMEFORGE
+            </span>
+
+            <h1>
+                ¿Tienes problemas con tu plan?
+            </h1>
+
+            <p>
+                Completa el siguiente formulario y cuéntanos
+                qué inconveniente estás teniendo.
+                Revisaremos tu solicitud para poder ayudarte.
+            </p>
+
+        </section>
+
+
+
+        <!-- =========================
+             FORMULARIO
+        ========================== -->
+
+        <section class="formulario-contenedor">
+
+            <iframe
+                src="https://docs.google.com/forms/d/e/1FAIpQLScMtmoqJLjhEfFiYySsSQXVUcQ6dGahdYwDoI4Y8QhhuN_BXA/viewform?embedded=true"
+                title="Formulario de soporte GameForge">
+
+                Cargando formulario...
+
+            </iframe>
+
+        </section>
+
+
+
+        <!-- =========================
+             VOLVER
+        ========================== -->
+
+        <div class="volver">
+
+            <a href="quienes.html">
+                ← Volver a Contáctanos
+            </a>
+
+        </div>
+
+
+    </main>
+
+
+
+    <!-- =========================
+         FOOTER
+    ========================== -->
+
+    <footer>
+
+        <div class="footer-logo">
+            🎮 GameForge
+        </div>
+
+        <p>
+            Creación y desarrollo de videojuegos
+        </p>
+
+        <p class="copy">
+            Todos los derechos reservados.
+        </p>
+
+    </footer>
+
+
+</body>
+
+</html>

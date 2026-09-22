@@ -1,0 +1,636 @@
+/* =====================================
+   CONFIGURACIÓN GENERAL
+===================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #080d1c;
+    color: #ffffff;
+    min-height: 100vh;
+}
+
+
+/* =====================================
+   NAVBAR
+===================================== */
+
+header {
+    width: 100%;
+    background: #0b1124;
+    border-bottom: 1px solid #29345a;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar {
+    width: 90%;
+    max-width: 1200px;
+    min-height: 78px;
+    margin: auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    color: #8178ff;
+    text-decoration: none;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+    list-style: none;
+}
+
+.menu a {
+    color: #d9ddec;
+    text-decoration: none;
+    font-size: 15px;
+    transition: 0.3s;
+}
+
+.menu a:hover,
+.menu a.activo {
+    color: #8178ff;
+}
+
+
+/* =====================================
+   HERO
+===================================== */
+
+.hero {
+    min-height: 500px;
+    padding: 80px 8%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 60px;
+
+    background:
+        radial-gradient(
+            circle at 85% 35%,
+            rgba(108, 99, 255, 0.22),
+            transparent 30%
+        ),
+        linear-gradient(
+            135deg,
+            #11182e,
+            #202b55,
+            #0d142b
+        );
+}
+
+.hero-text {
+    max-width: 620px;
+}
+
+.subtitulo {
+    color: #8c84ff;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 4px;
+}
+
+.hero-text h1 {
+    font-size: 56px;
+    line-height: 1.1;
+    margin: 18px 0 24px;
+}
+
+.hero-text p {
+    color: #bdc3d7;
+    font-size: 18px;
+    line-height: 1.7;
+}
+
+.hero-image {
+    width: 390px;
+    height: 290px;
+    overflow: hidden;
+
+    border-radius: 22px;
+    border: 2px solid #756dff;
+
+    box-shadow:
+        0 0 45px rgba(108, 99, 255, 0.35);
+}
+
+.hero-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+/* =====================================
+   SECCIÓN DE PLANES
+===================================== */
+
+.planes {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    padding: 90px 0;
+}
+
+.titulo-seccion {
+    text-align: center;
+    margin-bottom: 55px;
+}
+
+.titulo-seccion span {
+    color: #8178ff;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 3px;
+}
+
+.titulo-seccion h2 {
+    font-size: 42px;
+    margin: 12px 0;
+}
+
+.titulo-seccion p {
+    color: #aab0c2;
+    font-size: 16px;
+}
+
+
+/* =====================================
+   TARJETAS DE PLANES
+===================================== */
+
+.plan-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    align-items: stretch;
+}
+
+.plan-card {
+    position: relative;
+
+    padding: 32px;
+
+    display: flex;
+    flex-direction: column;
+
+    background:
+        linear-gradient(
+            160deg,
+            #192241,
+            #11182f
+        );
+
+    border: 1px solid #313b62;
+    border-radius: 20px;
+
+    transition: 0.3s;
+}
+
+.plan-card:hover {
+    transform: translateY(-8px);
+
+    border-color: #8178ff;
+
+    box-shadow:
+        0 20px 40px rgba(0, 0, 0, 0.25);
+}
+
+
+/* =====================================
+   PLAN DESTACADO
+===================================== */
+
+.plan-card.destacado {
+    border: 2px solid #7d74ff;
+
+    background:
+        linear-gradient(
+            160deg,
+            #202b52,
+            #151d3a
+        );
+}
+
+.recomendado {
+    position: absolute;
+
+    top: -14px;
+    left: 25px;
+
+    padding: 8px 15px;
+
+    background: #7c73ff;
+
+    border-radius: 20px;
+
+    font-size: 10px;
+
+    font-weight: bold;
+
+    letter-spacing: 1px;
+}
+
+
+/* =====================================
+   ICONOS
+===================================== */
+
+.plan-icon {
+    width: 60px;
+    height: 60px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #273258;
+
+    border-radius: 15px;
+
+    font-size: 30px;
+
+    margin-bottom: 20px;
+}
+
+
+/* =====================================
+   INFORMACIÓN DEL PLAN
+===================================== */
+
+.plan-card h3 {
+    font-size: 25px;
+    margin-bottom: 12px;
+}
+
+.plan-description {
+    color: #aeb5c9;
+    line-height: 1.6;
+    min-height: 55px;
+}
+
+
+/* =====================================
+   PRECIO
+===================================== */
+
+.precio {
+    color: #837aff;
+
+    font-size: 42px;
+
+    font-weight: bold;
+
+    margin: 25px 0;
+}
+
+.precio small {
+    font-size: 19px;
+}
+
+
+/* =====================================
+   SEPARADOR
+===================================== */
+
+.separador {
+    width: 100%;
+    height: 1px;
+
+    background: #343e62;
+
+    margin-bottom: 25px;
+}
+
+
+/* =====================================
+   BENEFICIOS
+===================================== */
+
+.plan-card ul {
+    list-style: none;
+    margin-bottom: 30px;
+}
+
+.plan-card li {
+    color: #d5d9e7;
+    font-size: 14px;
+    margin-bottom: 14px;
+}
+
+
+/* =====================================
+   BOTONES DE LOS PLANES
+===================================== */
+
+.btn-plan {
+    width: 100%;
+
+    margin-top: auto;
+
+    padding: 15px;
+
+    border: none;
+
+    border-radius: 10px;
+
+    background: #6f66f3;
+
+    color: white;
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    font-size: 15px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.btn-plan:hover {
+    background: #837aff;
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 8px 20px rgba(108, 99, 255, 0.30);
+}
+
+
+/* =====================================
+   SECCIÓN DE SELECCIÓN
+===================================== */
+
+.seleccion {
+    width: 90%;
+    max-width: 820px;
+
+    margin: auto;
+
+    padding: 20px 0 100px;
+}
+
+.seleccion-box {
+    padding: 45px;
+
+    text-align: center;
+
+    background:
+        linear-gradient(
+            145deg,
+            #1b2547,
+            #10172f
+        );
+
+    border: 1px solid #39466d;
+
+    border-radius: 22px;
+
+    box-shadow:
+        0 20px 50px rgba(0, 0, 0, 0.25);
+}
+
+.check-icon {
+    width: 58px;
+    height: 58px;
+
+    margin: 0 auto 18px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #292f60;
+
+    color: #9088ff;
+
+    font-size: 26px;
+
+    font-weight: bold;
+}
+
+.mini-titulo {
+    color: #8178ff;
+
+    font-size: 11px;
+
+    font-weight: bold;
+
+    letter-spacing: 3px;
+}
+
+.seleccion-box h2 {
+    font-size: 32px;
+
+    margin: 10px 0 22px;
+}
+
+
+/* =====================================
+   RESULTADO DE SELECCIÓN
+===================================== */
+
+#resultado {
+    min-height: 80px;
+
+    padding: 20px;
+
+    background: #0c1328;
+
+    border: 1px solid #303b61;
+
+    border-radius: 13px;
+}
+
+#resultado h3 {
+    color: #877eff;
+
+    font-size: 24px;
+
+    margin-bottom: 8px;
+}
+
+#resultado p {
+    color: #b8bfd2;
+
+    margin: 6px 0;
+}
+
+.sin-seleccion {
+    color: #8d95aa !important;
+}
+
+
+/* =====================================
+   BOTÓN CONTINUAR AL PAGO
+===================================== */
+
+.btn-pago {
+    width: 100%;
+
+    margin-top: 22px;
+
+    padding: 18px 24px;
+
+    border: none;
+
+    border-radius: 12px;
+
+    background: linear-gradient(
+        90deg,
+        #6359e9,
+        #887eff
+    );
+
+    color: #ffffff;
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    font-size: 17px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    box-shadow:
+        0 10px 28px rgba(101, 91, 235, 0.35);
+
+    transition: 0.3s;
+}
+
+.btn-pago:hover {
+    transform: translateY(-3px);
+
+    background: linear-gradient(
+        90deg,
+        #7268f4,
+        #958cff
+    );
+
+    box-shadow:
+        0 15px 32px rgba(101, 91, 235, 0.45);
+}
+
+.btn-pago strong {
+    font-size: 25px;
+}
+
+
+/* =====================================
+   FOOTER
+===================================== */
+
+footer {
+    padding: 40px 20px;
+
+    text-align: center;
+
+    background: #050912;
+
+    border-top: 1px solid #202944;
+}
+
+.footer-logo {
+    color: #8178ff;
+
+    font-size: 24px;
+
+    font-weight: bold;
+
+    margin-bottom: 10px;
+}
+
+footer p {
+    color: #9097aa;
+
+    margin: 6px;
+}
+
+.copy {
+    font-size: 12px;
+}
+
+
+/* =====================================
+   RESPONSIVE
+===================================== */
+
+@media (max-width: 950px) {
+
+    .navbar {
+        flex-direction: column;
+
+        gap: 18px;
+
+        padding: 20px 0;
+    }
+
+    .menu {
+        flex-wrap: wrap;
+
+        justify-content: center;
+
+        gap: 15px;
+    }
+
+    .hero {
+        flex-direction: column;
+
+        text-align: center;
+    }
+
+    .plan-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+@media (max-width: 550px) {
+
+    .hero-text h1 {
+        font-size: 38px;
+    }
+
+    .hero-image {
+        width: 290px;
+        height: 220px;
+    }
+
+    .seleccion-box {
+        padding: 30px 20px;
+    }
+
+    .titulo-seccion h2 {
+        font-size: 34px;
+    }
+}
